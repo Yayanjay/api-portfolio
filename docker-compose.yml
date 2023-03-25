@@ -1,0 +1,15 @@
+version: '3'
+services:
+  portfolio_db:
+    container_name: portfolio_db
+    image: mysql:latest
+    # restart: always
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=portfolio_db
+      - MYSQL_USER=yayanjay123
+      - MYSQL_PASSWORD=yayanjay123
+    ports:
+      - 3306:3306
