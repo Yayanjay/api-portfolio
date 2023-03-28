@@ -13,12 +13,6 @@ export class ProjectImage {
   id: number;
 
   @Column()
-  file_name: string;
-
-  @Column()
-  file_url: string;
-
-  @Column()
   key: string;
 
   @ManyToOne(() => Project, (project) => project.image_path)
